@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * 
+ * Class for the threads that works on the array
  */
 public class ThreadCheckArray implements Runnable {
 	private boolean flag;
@@ -11,8 +11,9 @@ public class ThreadCheckArray implements Runnable {
 	int b;
 
 	/**
+	 * The function receives a SharedData Instance and ensures a thread safe access
 	 * 
-	 * @param sd
+	 * @param sd SharedData instance for synchronization
 	 */
 	public ThreadCheckArray(SharedData sd) {
 		this.sd = sd;
@@ -24,9 +25,11 @@ public class ThreadCheckArray implements Runnable {
 	}
 
 	/**
+	 * A recursive method that synchronizes access to shared data and updates flag
+	 * to track progress
 	 * 
-	 * @param n
-	 * @param b
+	 * @param n the current size of the subset
+	 * @param b the target value
 	 */
 	void rec(int n, int b) {
 		synchronized (sd) {
@@ -56,7 +59,8 @@ public class ThreadCheckArray implements Runnable {
 	}
 
 	/**
-	 * 
+	 * The method for running the threads. checks conditions on the array and calls
+	 * 'rec' method as needed
 	 */
 	public void run() {
 		if (array.size() != 1)
