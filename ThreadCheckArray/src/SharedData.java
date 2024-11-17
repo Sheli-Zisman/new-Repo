@@ -29,17 +29,17 @@ public class SharedData
 	 * 
 	 * A constructor that accepts an ArrayList and an integer
 	 * 
-	 * @param arraylist an ArrayList of integers to store the numbers that will be
-	 *                  checked
+	 * @param array an ArrayList of integers to store the numbers that will be
+	 *              checked
 	 * 
-	 * @param b         an integer value that sent to check whether there are two
-	 *                  numbers in the array whose addition is equal to it
+	 * @param b     an integer value that sent to check whether there are two
+	 *              numbers in the array whose addition is equal to it
 	 * 
 	 */
 
-	public SharedData(ArrayList<Integer> arraylist, int b) {
+	public SharedData(ArrayList<Integer> arrayList, int b) {
 
-		this.arraylist = arraylist;
+		this.arraylist = arrayList;
 
 		this.b = b;
 
